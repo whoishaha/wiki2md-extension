@@ -37,6 +37,7 @@ function getSupportedPlatform(url) {
   if (url.includes('zread.ai')) return { id: 'zread', label: 'Zread', fallbackFolder: 'zread-docs' };
   if (url.includes('deepwiki.com')) return { id: 'deepwiki', label: 'DeepWiki', fallbackFolder: 'deepwiki-docs' };
   if (url.includes('codewiki.google')) return { id: 'codewiki', label: 'Code Wiki', fallbackFolder: 'code-wiki-docs' };
+  if (url.includes('readmex.com')) return { id: 'readmex', label: 'ReadMex', fallbackFolder: 'readmex-docs' };
   return null;
 }
 
@@ -288,9 +289,7 @@ async function processSinglePage(page) {
     throw new Error(convertResponse?.error || 'Conversion failed');
   }
 
-  const nameParts = [convertResponse.repoName, convertResponse.markdownTitle || page.title]
-    .filter(part => part && typeof part === 'string');
-  const fileName = getUniqueFileName(nameParts.join('-') || page.title);
+  const fileName = getUniqueFileName(page.title || convertResponse.markdownTitle || 'page');
   batchState.convertedPages.push({ title: fileName, content: convertResponse.markdown });
   batchState.processed += 1;
   broadcastBatchUpdate('pageProcessed', {
@@ -403,7 +402,7 @@ async function startBatchProcessing(tabId) {
   const tab = await getTabById(tabId);
   const platform = getSupportedPlatform(tab.url);
   if (!platform) {
-    throw new Error('Please open a Zread, DeepWiki, or Code Wiki page before starting batch conversion.');
+    throw new Error('Please open a Zread, DeepWiki, Code Wiki, or ReadMex page before starting batch conversion.');
   }
 
   // Extract all pages from sidebar

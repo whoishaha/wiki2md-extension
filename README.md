@@ -2,7 +2,7 @@
 
 [English](README_EN.md) | [中文](README.md)
 
-将 Zread、DeepWiki、Google Code Wiki 平台的 wiki 文档解析并保存为 Markdown 文件的浏览器插件。
+将 Zread、DeepWiki、Google Code Wiki、ReadMex 平台的 wiki 文档解析并保存为 Markdown 文件的浏览器插件。
 
 ## ✨ 项目亮点
 
@@ -10,7 +10,7 @@
 - 批量导出检测到的章节为 `.zip`
 - 在 YAML frontmatter 中保留来源元数据
 - 转换常见富文本内容
-- 支持 Zread、DeepWiki 和 Google Code Wiki
+- 支持 Zread、DeepWiki、Google Code Wiki 和 ReadMex
 
 ## 🚀 快速开始
 
@@ -23,7 +23,7 @@
 
 ### 🎯 使用方式
 
-1. 打开 Zread、DeepWiki 或 Google Code Wiki 页面。
+1. 打开 Zread、DeepWiki、Google Code Wiki 或 ReadMex 页面。
 2. 点击扩展图标，打开弹窗。
 3. 选择一个操作：
    - `转换当前页面`：导出当前页面为 Markdown
@@ -35,6 +35,7 @@
 - Zread
 - DeepWiki
 - Google Code Wiki
+- ReadMex
 
 ## 🖼️ 截图
 

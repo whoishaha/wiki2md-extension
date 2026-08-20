@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "wiki2md-extension",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parse and save wiki documents from Zread, DeepWiki, and Google Code Wiki as Markdown files",
   "permissions": [
     "activeTab",
@@ -14,7 +14,8 @@
     "https://zread.ai/*",
     "http://zread.ai/*",
     "https://deepwiki.com/*",
-    "https://codewiki.google/*"
+    "https://codewiki.google/*",
+    "https://readmex.com/*"
   ],
   "icons": {
     "32": "icons/icon32.png",
@@ -38,13 +39,15 @@
         "https://zread.ai/*",
         "http://zread.ai/*",
         "https://deepwiki.com/*",
-        "https://codewiki.google/*"
+        "https://codewiki.google/*",
+        "https://readmex.com/*"
       ],
       "js": [
         "parsers/registry.js",
         "parsers/zread-parser.js",
         "parsers/deepwiki-parser.js",
         "parsers/codewiki-parser.js",
+        "parsers/readmex-parser.js",
         "content.js"
       ],
       "run_at": "document_end"

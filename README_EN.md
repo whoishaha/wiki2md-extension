@@ -2,7 +2,7 @@
 
 [中文](README.md) | [English](README_EN.md)
 
-A browser extension for parsing and saving wiki documents from Zread, DeepWiki, and Google Code Wiki as Markdown files.
+A browser extension for parsing and saving wiki documents from Zread, DeepWiki, Google Code Wiki, and ReadMex as Markdown files.
 
 ## ✨ Highlights
 
@@ -10,7 +10,7 @@ A browser extension for parsing and saving wiki documents from Zread, DeepWiki, 
 - Batch export detected chapters as `.zip`
 - Preserve source metadata in YAML frontmatter
 - Convert common rich content
-- Support Zread, DeepWiki, and Google Code Wiki
+- Support Zread, DeepWiki, Google Code Wiki, and ReadMex
 
 ## 🚀 Quick Start
 
@@ -23,7 +23,7 @@ A browser extension for parsing and saving wiki documents from Zread, DeepWiki, 
 
 ### 🎯 Usage
 
-1. Open a page on Zread, DeepWiki, or Google Code Wiki.
+1. Open a page on Zread, DeepWiki, Google Code Wiki, or ReadMex.
 2. Click the extension icon to open the popup.
 3. Choose one action:
    - `转换当前页面`: export the current page as Markdown
@@ -35,6 +35,7 @@ A browser extension for parsing and saving wiki documents from Zread, DeepWiki, 
 - Zread
 - DeepWiki
 - Google Code Wiki
+- ReadMex
 
 ## 🖼️ Screenshots
 

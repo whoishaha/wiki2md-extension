@@ -12,8 +12,8 @@ const i18n = {
     cancelBatch: "取消批量导出",
     batchProcessing: "批量处理中...",
     batchPreparing: "准备中",
-    footerText: "支持 Zread、DeepWiki 与 Code Wiki",
-    msgNotSupported: "请在 Zread、DeepWiki 或 Code Wiki 页面使用此工具",
+    footerText: "支持 Zread、DeepWiki、Code Wiki 与 ReadMex",
+    msgNotSupported: "请在 Zread、DeepWiki、Code Wiki 或 ReadMex 页面使用此工具",
     msgConverting: "正在转换页面...",
     msgConvertSuccess: "转换成功！正在下载...",
     msgConvertFail: "转换失败：",
@@ -40,7 +40,7 @@ const i18n = {
   },
   en: {
     documentTitle: "wiki2md-extension",
-    headerSubtitle: "Zread / DeepWiki / Code Wiki Exporter",
+    headerSubtitle: "Zread / DeepWiki / Code Wiki / ReadMex Exporter",
     statusReady: "Ready to convert",
     convertSingleTitle: "Convert Current Page",
     convertSingleDesc: "Export this document to Markdown",
@@ -49,8 +49,8 @@ const i18n = {
     cancelBatch: "Cancel Batch Export",
     batchProcessing: "Batch processing...",
     batchPreparing: "Preparing",
-    footerText: "Supports Zread, DeepWiki & Code Wiki",
-    msgNotSupported: "Please use this tool on Zread, DeepWiki, or Code Wiki pages",
+    footerText: "Supports Zread, DeepWiki, Code Wiki & ReadMex",
+    msgNotSupported: "Please use this tool on Zread, DeepWiki, Code Wiki, or ReadMex pages",
     msgConverting: "Converting page...",
     msgConvertSuccess: "Conversion successful! Downloading...",
     msgConvertFail: "Conversion failed: ",
@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (url.includes('zread.ai')) return { id: 'zread', label: 'Zread' };
     if (url.includes('deepwiki.com')) return { id: 'deepwiki', label: 'DeepWiki' };
     if (url.includes('codewiki.google')) return { id: 'codewiki', label: 'Code Wiki' };
+    if (url.includes('readmex.com')) return { id: 'readmex', label: 'ReadMex' };
     return null;
   }
 

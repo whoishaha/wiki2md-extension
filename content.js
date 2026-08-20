@@ -98,7 +98,9 @@
             ? url.match(/zread\.ai\/([^/]+)\/([^/]+)/)
             : platform.id === 'deepwiki'
                 ? url.match(/deepwiki\.com\/([^/]+)\/([^/]+)/)
-                : url.match(/codewiki\.google\/github\.com\/([^/]+)\/([^/#?]+)/);
+                : platform.id === 'codewiki'
+                    ? url.match(/codewiki\.google\/github\.com\/([^/]+)\/([^/#?]+)/)
+                    : url.match(/readmex\.com\/([^/]+)\/([^/]+)\//);
         const owner = urlMatch ? urlMatch[1] : '';
         const repo = urlMatch ? urlMatch[2] : '';
 
